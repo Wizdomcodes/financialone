@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+<header>
+  <div class="top-header">
+    <div class="logo">
+      F<span>1</span>RST FINANCIAL BANK
+    </div>
+  </div>
+
+  <nav>
+    <div class="nav-links">
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" style="height:auto; min-height:100vh;">
+  <div class="modal" style="display:flex; position:static; background:none;">
+    <div class="modal-content">
+      <h2>Create Account</h2>
+
+      <!-- SIGNUP FORM -->
+      <form onsubmit="signup(event)">
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="text" id="signupUsername" placeholder="Username" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <input type="password" id="signupPin" placeholder="Create 4-digit PIN" maxlength="4" required>
+
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <p class="signup-link" style="text-align:center; margin-top:15px;">
+        Already have an account?
+        <a href="login.html">Login</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- OTP MODAL -->
+<div class="modal" id="otpModal">
+  <div class="modal-content">
+    <h2>Verify Email</h2>
+    <p id="otpMessage" style="text-align:center; margin-bottom:15px;"></p>
+
+    <form onsubmit="verifyOTP(event)">
+      <input type="text" id="otpInput" placeholder="Enter 6-digit OTP" required>
+      <button type="submit">Verify</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

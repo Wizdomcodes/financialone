@@ -1,0 +1,571 @@
+/* ===== BASE BODY ===== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0f172a;
+}
+.hero {
+  background-color: #0f172a;
+}
+
+/* ===== LOGIN PAGE ===== */
+.login-page {
+  background: #ffffff;
+}
+
+/* ===== DASHBOARD PAGE ===== */
+.dashboard-page {
+  background: var(--light-bg);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.top-header {
+  text-align: center;
+  padding: 15px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #d6001c;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  font-size: 15px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-contact {
+  background: #d6001c;
+  color: #fff;
+}
+
+.btn-login {
+  background: #1e293b;
+  color: #fff;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  height: 80vh;
+  background:
+    linear-gradient(to right, rgba(15,23,42,0.8), rgba(15,23,42,0.2)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.btn-hero {
+  background: #d6001c;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 15px;
+  display: inline-block;
+}
+
+/* ===== LOGIN MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #cbd5f5;
+}
+
+.modal button {
+  width: 100%;
+  padding: 12px;
+  background: #1e293b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 60px 25px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+
+/*dashboard styling*/
+/* ================= BANKING DASHBOARD THEME ================= */
+
+:root {
+  --primary: #0a3cff;
+  --primary-dark: #0026b3;
+  --light-bg: #f5f8ff;
+  --card-bg: #ffffff;
+  --text-dark: #0f172a;
+  --success: #16a34a;
+  --danger: #dc2626;
+}
+
+/* GLOBAL */
+body {
+  background: var(--light-bg);
+}
+
+/* HEADER */
+.dash-header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dash-header h2 {
+  font-size: 20px;
+}
+
+.dash-header button {
+  background: #ffffff;
+  color: var(--primary);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SUMMARY CARDS */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 25px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h4 {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.balance-card p {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.card button {
+  margin-top: 12px;
+  padding: 6px 14px;
+  font-size: 12px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ACTION SECTIONS */
+.action-section {
+  background: var(--card-bg);
+  margin: 20px 25px;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+}
+
+.action-section h3 {
+  margin-bottom: 15px;
+  color: var(--text-dark);
+}
+
+.action-section input,
+.action-section select {
+  padding: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #c7d2fe;
+  width: 220px;
+}
+
+.action-section button {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+}
+
+/* TRANSACTIONS */
+.transactions {
+  background: var(--card-bg);
+  margin: 20px 25px 40px;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+}
+
+.transactions h3 {
+  margin-bottom: 15px;
+}
+
+.filters {
+  margin-bottom: 15px;
+}
+
+.filters button {
+  background: #e0e7ff;
+  color: var(--primary);
+  border: none;
+  padding: 6px 14px;
+  border-radius: 16px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.transactions ul {
+  list-style: none;
+}
+
+.transactions li {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.credit {
+  color: var(--success);
+}
+
+.debit {
+  color: var(--danger);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .dash-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .action-section input,
+  .action-section select,
+  .action-section button {
+    width: 100%;
+  }
+
+  .summary {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .balance-card p {
+    font-size: 26px;
+  }
+
+  .transactions li {
+    font-size: 13px;
+  }
+}
+/* ================= DASHBOARD ADVANCED UI ================= */
+
+.dash-logo {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.dash-logo span {
+  color: #ff2d2d;
+}
+
+.dash-right {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background: #fff;
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* GREETING */
+.welcome {
+  padding: 20px 25px;
+}
+
+.welcome p {
+  color: #475569;
+  margin-top: 5px;
+}
+
+/* ACCOUNTS */
+.accounts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px 25px;
+}
+
+.account-card {
+  color: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.account-card.checking {
+  background: linear-gradient(135deg, #0a3cff, #0026b3);
+}
+
+.account-card.savings {
+  background: linear-gradient(135deg, #16a34a, #065f46);
+}
+
+.account-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.acct-balance {
+  font-size: 30px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.account-card button {
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .dash-header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .dash-right {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .acct-balance {
+    font-size: 24px;
+  }
+}
+/* ================= ACTIVITY FEED ================= */
+
+.activity {
+  background: #fff;
+  margin: 20px 25px 40px;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+}
+
+.activity h3 {
+  margin-bottom: 15px;
+}
+
+.activity ul {
+  list-style: none;
+}
+
+.activity li {
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity .credit {
+  color: var(--success);
+}
+
+.activity .debit {
+  color: var(--danger);
+}
+/* TRANSFER MODAL */
+.transfer-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.transfer-box {
+  background: #fff;
+  padding: 25px;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.transfer-box h3 {
+  margin-bottom: 15px;
+}
+
+.transfer-box input,
+.transfer-box select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #c7d2fe;
+}
+
+.transfer-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 20px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #e5e7eb !important;
+  color: #000 !important;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banking Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="dashboard-page">
+
+<!-- TOP NAV -->
+<header class="dash-header">
+  <div class="dash-left">
+    <div class="dash-logo">
+      F<span>1</span>RST FINANCIAL BANK
+    </div>
+  </div>
+
+  <div class="dash-right">
+    <button class="icon-btn" title="Notifications">🔔</button>
+    <button class="icon-btn" onclick="openChat()">❓</button>
+    <button class="icon-btn" title="Profile & Settings">⚙️</button>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+</header>
+
+<!-- GREETING -->
+<section class="welcome">
+  <h2>Good day, <span id="userDisplay"></span></h2>
+  <p>We’re looking forward to helping you today.</p>
+</section>
+
+<!-- ACCOUNTS -->
+<section class="accounts">
+
+  <!-- CHECKING -->
+  <div class="account-card checking">
+    <div class="account-top">
+      <h4>Checking Account</h4>
+      <span id="checkingAcct"></span>
+    </div>
+    <p class="acct-balance" id="checkingBalance"></p>
+  <button onclick="transferFrom('checking')">Make a transfer</button>
+
+  </div>
+
+  <!-- SAVINGS -->
+  <div class="account-card savings">
+    <div class="account-top">
+      <h4>Savings Account</h4>
+      <span id="savingsAcct"></span>
+    </div>
+    <p class="acct-balance" id="savingsBalance"></p>
+    <button onclick="transferFrom('checking')">Make a transfer</button>
+
+  </div>
+
+</section>
+
+<!-- ACTIVITY -->
+<section class="activity">
+  <h3>Recent Activity</h3>
+  <ul id="activityList"></ul>
+</section>
+
+
+<!-- TRANSFER MODAL -->
+<div id="transferModal" class="transfer-modal">
+  <div class="transfer-box">
+    <h3>Make a Transfer</h3>
+
+    <input type="text" id="bank" placeholder="Beneficiary Bank Name">
+    <input type="text" id="beneficiary" placeholder="Beneficiary Name">
+    <input type="text" id="accountNumber" placeholder="Account Number">
+    <input type="text" id="routingNumber" placeholder="Routing Number">
+    <input type="number" id="transferAmount" placeholder="Amount">
+    <input type="text" id="transferNote" placeholder="Transfer Note (optional)">
+
+    <button onclick="confirmTransfer()">Confirm Transfer</button>
+    <button class="cancel-btn" onclick="closeTransfer()">Cancel</button>
+  </div>
+</div>
+<!-- PIN VERIFICATION MODAL -->
+<div id="pinModal" class="transfer-modal">
+  <div class="transfer-box">
+    <h3>Enter Transaction PIN</h3>
+    <input type="password" id="pinInput" placeholder="4-digit PIN" maxlength="4">
+    <button onclick="verifyPin()">Confirm</button>
+    <button class="cancel-btn" onclick="closePin()">Cancel</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
